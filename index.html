@@ -3,33 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>emr_4313 - Download</title>
-    
-    <!-- Meta tags for Discord/Social Media Preview -->
-    <meta name="description" content="Download emr_4313 - Experience the next generation of scripting">
-    <meta property="og:title" content="emr_4313 - Download">
-    <meta property="og:description" content="Experience the next generation of scripting with emr_4313 1.0.12">
+    <title>VertexForge - Download</title>
+    <meta name="description" content="Download VertexForge - Experience the next generation of scripting">
+    <meta property="og:title" content="VertexForge - Download">
+    <meta property="og:description" content="Experience the next generation of scripting with VertexForge 1.0.12">
     <meta property="og:image" content="https://redfuly.github.io/discord-preview.png">
     <meta property="og:url" content="https://redfuly.github.io/">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#1a1a1a">
-    
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="emr_4313 - Download">
+    <meta name="twitter:title" content="VertexForge - Download">
     <meta name="twitter:description" content="Experience the next generation of scripting">
     <meta name="twitter:image" content="https://redfuly.github.io/discord-preview.png">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Syne:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --bg-primary: #000000;
             --bg-secondary: #0a0a0a;
@@ -41,7 +31,6 @@
             --accent-highlight: #3a3a3a;
             --border-subtle: rgba(255, 255, 255, 0.05);
         }
-
         body {
             font-family: 'Syne', sans-serif;
             background: var(--bg-primary);
@@ -50,42 +39,32 @@
             overflow-x: hidden;
             position: relative;
         }
-
-        /* Animated background */
         body::before {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: 
-                radial-gradient(circle at 20% 50%, rgba(30, 30, 30, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(40, 40, 40, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 40% 20%, rgba(25, 25, 25, 0.2) 0%, transparent 50%);
+                radial-gradient(circle at 20% 50%, rgba(30,30,30,0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(40,40,40,0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(25,25,25,0.2) 0%, transparent 50%);
             animation: gradientShift 15s ease infinite;
             pointer-events: none;
             z-index: 0;
         }
-
         @keyframes gradientShift {
             0%, 100% { opacity: 1; transform: scale(1); }
             50% { opacity: 0.8; transform: scale(1.1); }
         }
-
-        /* Grain texture */
         body::after {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
             pointer-events: none;
             z-index: 1;
         }
-
         .container {
             position: relative;
             z-index: 2;
@@ -93,8 +72,6 @@
             margin: 0 auto;
             padding: 0 2rem;
         }
-
-        /* Navigation */
         nav {
             display: flex;
             justify-content: space-between;
@@ -102,12 +79,10 @@
             padding: 2rem 0;
             animation: slideDown 0.8s ease;
         }
-
         @keyframes slideDown {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         .logo {
             display: flex;
             align-items: center;
@@ -117,10 +92,8 @@
             font-weight: 900;
             letter-spacing: 0.05em;
         }
-
         .logo-icon {
-            width: 40px;
-            height: 40px;
+            width: 40px; height: 40px;
             background: #1a1a1a;
             border-radius: 8px;
             display: flex;
@@ -129,24 +102,12 @@
             animation: pulse 3s ease-in-out infinite;
             overflow: hidden;
         }
-
-        .logo-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
+        .logo-icon img { width: 100%; height: 100%; object-fit: cover; }
         @keyframes pulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); }
-            50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(255, 255, 255, 0.15); }
+            0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(255,255,255,0.1); }
+            50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(255,255,255,0.15); }
         }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
         .nav-links a {
             color: var(--text-secondary);
             text-decoration: none;
@@ -154,29 +115,19 @@
             transition: all 0.3s ease;
             position: relative;
         }
-
         .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
             background: #ffffff;
             transition: width 0.3s ease;
         }
-
-        .nav-links a:hover {
-            color: var(--text-primary);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
+        .nav-links a:hover { color: var(--text-primary); }
+        .nav-links a:hover::after { width: 100%; }
         .discord-btn {
-            background: rgba(30, 30, 30, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(30,30,30,0.6);
+            border: 1px solid rgba(255,255,255,0.1);
             padding: 0.6rem 1.5rem;
             border-radius: 8px;
             color: #fff;
@@ -184,25 +135,18 @@
             align-items: center;
             gap: 0.5rem;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
-
-        .discord-btn:hover {
-            background: rgba(40, 40, 40, 0.8);
-            transform: translateY(-2px);
-        }
-
-        /* Hero Section */
+        .discord-btn:hover { background: rgba(40,40,40,0.8); transform: translateY(-2px); }
         .hero {
             text-align: center;
             padding: 6rem 0 4rem;
             animation: fadeIn 1s ease 0.2s backwards;
         }
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         .hero h1 {
             font-family: 'Orbitron', sans-serif;
             font-size: clamp(3rem, 8vw, 6rem);
@@ -211,19 +155,7 @@
             color: #ffffff;
             line-height: 1.1;
         }
-
-        @keyframes gradientSlide {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            margin-bottom: 3rem;
-        }
-
-        /* Main Content */
+        .hero p { font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 3rem; }
         .main-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -231,7 +163,6 @@
             margin-bottom: 4rem;
             animation: fadeIn 1s ease 0.4s backwards;
         }
-
         .app-info {
             background: var(--bg-card);
             backdrop-filter: blur(20px);
@@ -241,106 +172,67 @@
             position: relative;
             overflow: hidden;
         }
-
         .app-info::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(30, 30, 30, 0.3);
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(30,30,30,0.3);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-
-        .app-info:hover::before {
-            opacity: 1;
-        }
-
-        .app-header {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
-        }
-
+        .app-info:hover::before { opacity: 1; }
+        .app-header { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; }
         .app-icon {
-            width: 80px;
-            height: 80px;
+            width: 80px; height: 80px;
             background: #1a1a1a;
             border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 2rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
             overflow: hidden;
         }
-
-        .app-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
+        .app-icon img { width: 100%; height: 100%; object-fit: cover; }
         .app-title h2 {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.5rem;
             font-weight: 900;
             margin-bottom: 0.25rem;
         }
-
         .badge {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(30, 30, 30, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(30,30,30,0.6);
+            border: 1px solid rgba(255,255,255,0.1);
             padding: 0.35rem 0.75rem;
             border-radius: 6px;
             font-size: 0.85rem;
             color: #ffffff;
         }
-
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
             margin-bottom: 2.5rem;
         }
-
         .feature-card {
-            background: rgba(10, 10, 10, 0.8);
+            background: rgba(10,10,10,0.8);
             border: 1px solid var(--border-subtle);
             padding: 1.5rem;
             border-radius: 16px;
             transition: all 0.3s ease;
         }
-
         .feature-card:hover {
             transform: translateY(-4px);
-            border-color: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255,255,255,0.15);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
-
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-card p {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-
+        .feature-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+        .feature-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .feature-card p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; }
         .download-btn {
             display: inline-flex;
             align-items: center;
@@ -351,36 +243,23 @@
             border-radius: 12px;
             font-weight: 600;
             font-size: 1.1rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255,255,255,0.1);
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             position: relative;
             overflow: hidden;
         }
-
         .download-btn::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
             transition: left 0.5s ease;
         }
-
-        .download-btn:hover::before {
-            left: 100%;
-        }
-
-        .download-btn:hover {
-            transform: translateY(-2px);
-            background: #2a2a2a;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        /* Updates Panel */
+        .download-btn:hover::before { left: 100%; }
+        .download-btn:hover { transform: translateY(-2px); background: #2a2a2a; box-shadow: 0 15px 40px rgba(0,0,0,0.4); }
         .updates-panel {
             background: var(--bg-card);
             backdrop-filter: blur(20px);
@@ -388,23 +267,15 @@
             border-radius: 24px;
             padding: 2.5rem;
         }
-
         .updates-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 1.5rem;
         }
-
-        .updates-header h3 {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 1.3rem;
-        }
-
+        .updates-header h3 { display: flex; align-items: center; gap: 0.75rem; font-size: 1.3rem; }
         .update-item {
-            background: rgba(10, 10, 10, 0.8);
+            background: rgba(10,10,10,0.8);
             border: 1px solid var(--border-subtle);
             padding: 1.25rem;
             border-radius: 12px;
@@ -412,59 +283,26 @@
             transition: all 0.3s ease;
             animation: slideIn 0.5s ease backwards;
         }
-
         @keyframes slideIn {
             from { opacity: 0; transform: translateX(20px); }
             to { opacity: 1; transform: translateX(0); }
         }
-
         .update-item:nth-child(2) { animation-delay: 0.1s; }
         .update-item:nth-child(3) { animation-delay: 0.2s; }
         .update-item:nth-child(4) { animation-delay: 0.3s; }
         .update-item:nth-child(5) { animation-delay: 0.4s; }
-
-        .update-item:hover {
-            border-color: rgba(255, 255, 255, 0.15);
-            transform: translateX(5px);
-        }
-
-        .update-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .update-item p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* Responsive */
+        .update-item:hover { border-color: rgba(255,255,255,0.15); transform: translateX(5px); }
+        .update-item:last-child { margin-bottom: 0; }
+        .update-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; }
         @media (max-width: 1024px) {
-            .main-content {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-links {
-                gap: 1.5rem;
-            }
+            .main-content { grid-template-columns: 1fr; }
+            .nav-links { gap: 1.5rem; }
         }
-
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .app-info, .updates-panel {
-                padding: 2rem;
-            }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            .features-grid { grid-template-columns: 1fr; }
+            .app-info, .updates-panel { padding: 2rem; }
         }
     </style>
 </head>
@@ -473,9 +311,9 @@
         <nav>
             <div class="logo">
                 <div class="logo-icon">
-                    <img src="/image-removebg-preview.png" alt="Logo">
+                    <img src="/hebe.png" alt="Logo">
                 </div>
-                <span>emr_4313</span>
+                <span>VertexForge</span>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -495,7 +333,7 @@
         </nav>
 
         <section class="hero">
-            <h1>Download emr_4313</h1>
+            <h1>Download VertexForge</h1>
             <p>Experience the next generation of scripting</p>
         </section>
 
@@ -503,10 +341,10 @@
             <div class="app-info">
                 <div class="app-header">
                     <div class="app-icon">
-                        <img src="image-removebg-preview.png" alt="App Icon" style="width: 100%; height: 100%; object-fit: contain;">
+                        <img src="hebe.png" alt="App Icon" style="width:100%;height:100%;object-fit:contain;">
                     </div>
                     <div class="app-title">
-                        <h2>emr_4313 1.0.12</h2>
+                        <h2>VertexForge 1.0.12</h2>
                         <span class="badge">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M9 11l3 3L22 4"></path>
@@ -555,21 +393,11 @@
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                 </div>
-                <div class="update-item">
-                    <p>Enhanced UI/UX with modern design system</p>
-                </div>
-                <div class="update-item">
-                    <p>Improved performance and stability</p>
-                </div>
-                <div class="update-item">
-                    <p>Added support for new scripting features</p>
-                </div>
-                <div class="update-item">
-                    <p>Fixed critical bugs and memory leaks</p>
-                </div>
-                <div class="update-item">
-                    <p>Enhanced security and anti-detection measures</p>
-                </div>
+                <div class="update-item"><p>Enhanced UI/UX with modern design system</p></div>
+                <div class="update-item"><p>Improved performance and stability</p></div>
+                <div class="update-item"><p>Added support for new scripting features</p></div>
+                <div class="update-item"><p>Fixed critical bugs and memory leaks</p></div>
+                <div class="update-item"><p>Enhanced security and anti-detection measures</p></div>
             </div>
         </div>
     </div>
